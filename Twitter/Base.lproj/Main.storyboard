@@ -75,27 +75,55 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oT-WB-v87">
-                                            <rect key="frame" x="93" y="33" width="301" height="80"/>
+                                            <rect key="frame" x="93" y="33" width="301" height="42"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBA-Nc-58P" userLabel="favoriteButton">
+                                            <rect key="frame" x="360" y="83" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="PjR-ii-sA6"/>
+                                                <constraint firstAttribute="width" constant="30" id="TdR-hL-VpP"/>
+                                            </constraints>
+                                            <state key="normal" image="favor-icon"/>
+                                            <connections>
+                                                <action selector="onFavoriteTapped:" destination="YME-H8-NHt" eventType="touchUpInside" id="i1U-fY-bHQ"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZX-PK-V2f" userLabel="retweetButton">
+                                            <rect key="frame" x="314" y="86" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="NLK-NI-AdS"/>
+                                                <constraint firstAttribute="width" constant="30" id="TSn-nU-519"/>
+                                            </constraints>
+                                            <state key="normal" image="retweet-icon"/>
+                                            <connections>
+                                                <action selector="onRetweetTapped:" destination="YME-H8-NHt" eventType="touchUpInside" id="Lma-gL-T3y"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="0oT-WB-v87" firstAttribute="leading" secondItem="s3n-KK-mpa" secondAttribute="trailing" constant="8" id="0tA-mn-Uwg"/>
                                         <constraint firstItem="foq-CB-deJ" firstAttribute="leading" secondItem="s3n-KK-mpa" secondAttribute="trailing" constant="8" id="4fg-jG-K56"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="0oT-WB-v87" secondAttribute="trailing" id="FfH-Yc-Ke2"/>
+                                        <constraint firstAttribute="bottom" secondItem="fZX-PK-V2f" secondAttribute="bottom" constant="4" id="MX8-9j-DID"/>
                                         <constraint firstItem="foq-CB-deJ" firstAttribute="top" secondItem="kg3-CJ-81U" secondAttribute="topMargin" id="McC-xA-RwQ"/>
-                                        <constraint firstItem="0oT-WB-v87" firstAttribute="bottom" secondItem="kg3-CJ-81U" secondAttribute="bottomMargin" constant="4" id="QAL-bz-8ip"/>
                                         <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="s3n-KK-mpa" secondAttribute="bottom" constant="4" id="ZJj-AO-fP8"/>
                                         <constraint firstItem="s3n-KK-mpa" firstAttribute="top" secondItem="kg3-CJ-81U" secondAttribute="topMargin" id="ZO0-Sa-q7O"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="dBA-Nc-58P" secondAttribute="trailing" constant="4" id="Zb6-UW-N9u"/>
                                         <constraint firstItem="0oT-WB-v87" firstAttribute="top" secondItem="foq-CB-deJ" secondAttribute="bottom" constant="4" id="iIy-kh-C6o"/>
                                         <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="foq-CB-deJ" secondAttribute="trailing" constant="10" id="nVb-Ge-KTj"/>
+                                        <constraint firstItem="dBA-Nc-58P" firstAttribute="top" secondItem="0oT-WB-v87" secondAttribute="bottom" constant="8" id="p5u-rl-ags"/>
                                         <constraint firstItem="s3n-KK-mpa" firstAttribute="leading" secondItem="kg3-CJ-81U" secondAttribute="leadingMargin" id="sa3-sU-Cam"/>
+                                        <constraint firstItem="dBA-Nc-58P" firstAttribute="leading" secondItem="fZX-PK-V2f" secondAttribute="trailing" constant="16" id="t3M-7i-10L"/>
+                                        <constraint firstItem="dBA-Nc-58P" firstAttribute="bottom" secondItem="kg3-CJ-81U" secondAttribute="bottomMargin" constant="4" id="vvU-OZ-ez8"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="favoriteButton" destination="dBA-Nc-58P" id="F41-yu-Oox"/>
                                     <outlet property="profileImageView" destination="s3n-KK-mpa" id="Xyz-Y6-uTR"/>
+                                    <outlet property="retweetButton" destination="fZX-PK-V2f" id="pqk-L9-6xP"/>
                                     <outlet property="tweetContentLabel" destination="0oT-WB-v87" id="kFS-Ut-fdE"/>
                                     <outlet property="userNameLabel" destination="foq-CB-deJ" id="QdL-ID-ybn"/>
                                 </connections>
@@ -214,4 +242,8 @@
             <point key="canvasLocation" x="2407" y="152"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="favor-icon" width="30" height="30"/>
+        <image name="retweet-icon" width="30" height="30"/>
+    </resources>
 </document>
