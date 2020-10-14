@@ -38,7 +38,7 @@
                         <viewLayoutGuide key="safeArea" id="OyQ-TN-DVf"/>
                     </view>
                     <connections>
-                        <segue destination="d0x-c1-LGo" kind="presentation" identifier="loginToHome" id="HWd-W1-kOd"/>
+                        <segue destination="zM0-ry-jTK" kind="presentation" identifier="loginToHome" id="HWd-W1-kOd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIc-Se-OLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -151,7 +151,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tu7-Qo-hNb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1649.2753623188407" y="151.63043478260872"/>
+            <point key="canvasLocation" x="2556.521739130435" y="151.63043478260872"/>
         </scene>
         <!--Tweet View Controller-->
         <scene sceneID="Wra-wo-7Oz">
@@ -209,12 +209,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udZ-he-myV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3122" y="152"/>
+            <point key="canvasLocation" x="4028.985507246377" y="151.63043478260872"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tweets-->
         <scene sceneID="cCt-0E-YXv">
             <objects>
                 <navigationController modalPresentationStyle="fullScreen" id="d0x-c1-LGo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tweets" image="home-icon" id="ziW-1r-P7q"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rsZ-55-s9x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -229,7 +230,23 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KeN-OF-2sa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850" y="152"/>
+            <point key="canvasLocation" x="1756.521739130435" y="151.63043478260872"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="eGx-s1-LOp">
+            <objects>
+                <viewController id="slK-Bq-njk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6CM-PO-5zt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4LL-9Z-LuL"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile-Icon" id="g33-Ly-j5b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dk6-gc-W3H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="882"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A6l-xq-vWK">
@@ -248,11 +265,31 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3p2-e3-OSm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2407" y="152"/>
+            <point key="canvasLocation" x="3313.04347826087" y="151.63043478260872"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Qi3-ts-2fr">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="zM0-ry-jTK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pnF-P9-uUK">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="d0x-c1-LGo" kind="relationship" relationship="viewControllers" id="L7e-my-sXw"/>
+                        <segue destination="slK-Bq-njk" kind="relationship" relationship="viewControllers" id="mfI-cL-zSR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I6X-dU-wql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849.27536231884062" y="151.63043478260872"/>
         </scene>
     </scenes>
     <resources>
         <image name="favor-icon" width="30" height="30"/>
+        <image name="home-icon" width="30" height="30"/>
+        <image name="profile-Icon" width="26" height="26"/>
         <image name="retweet-icon" width="30" height="30"/>
     </resources>
 </document>
