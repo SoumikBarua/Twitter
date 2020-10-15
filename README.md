@@ -30,7 +30,11 @@ Required (iPhone 8 Plus on Xcode simulator)
 
 Bonus feature 1 (iPhone 8 Plus on Xcode simulator)
 
-![Bonus features 1 & 2](part2_bonus1.gif)
+![Bonus feature 1](part2_bonus1.gif)
+
+Bonus feature 2 (iPhone 8 Plus on Xcode simulator)
+
+![Bonus feature 2](part2_bonus2.gif)
 
 ## Twitter - Part I
 

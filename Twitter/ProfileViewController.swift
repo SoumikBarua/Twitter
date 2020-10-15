@@ -25,14 +25,17 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadUserData()
+    }
+    
     
     func loadUserData() {
         let stringURL = "https://api.twitter.com/1.1/account/verify_credentials.json"
         let params = ["skip_status": true as Any]
         TwitterAPICaller.client?.getDictionaryRequest(url: stringURL, parameters: params, success:
             { (tweets: NSDictionary) in
-                print("succesfully made the request")
-                print("\(tweets)")
                 
                 let imageURL = URL(string: (tweets["profile_image_url_https"] as? String)!)
                 let data = try? Data(contentsOf:imageURL!)
